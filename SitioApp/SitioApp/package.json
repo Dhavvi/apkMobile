@@ -1,0 +1,35 @@
+{
+  "name": "SitioApp",
+  "version": "1.0.0",
+  "description": "A React Native application for displaying emojis.",
+  "main": "App.tsx",
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "jest",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "expo": "~44.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-native": "0.64.0",
+    "react-native-gesture-handler": "~2.1.0",
+    "react-native-reanimated": "~2.2.0",
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-screens": "~3.10.1",
+    "react-navigation": "^4.4.4",
+    "expo-image": "~1.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "~17.0.0",
+    "@types/react-native": "~0.64.0",
+    "typescript": "~4.4.3",
+    "jest": "^27.0.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "license": "MIT"
+}
