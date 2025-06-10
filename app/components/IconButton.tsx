@@ -10,9 +10,9 @@ type Props = {
 
 export default function IconButton({ icon, label, onPress }: Props) {
     return (
-        <Pressable style={StyleSheet.iconButton} onPress={onPress}>
-            <MaterialIcons name={icon} size={24} color="#fff" />
-            <Text style={StyleSheet.iconButtonLabel}>{label}</Text>
+        <Pressable style={styles.iconButton} onPress={onPress}>
+            <MaterialIcons name={icon} size={24} color="#00000" />
+            <Text style={styles.iconButtonLabel}>{label}</Text>
         </Pressable>
     );
 }
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     iconButtonLabel: {
-        color: '#fff',
+        color: '#2B282B',
         marginTop: 12,
     },
 });

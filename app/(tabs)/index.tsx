@@ -5,7 +5,7 @@ import {Image} from 'expo-image';
 import * as ImagePicker from 'expo-image-picker';
 import {useState} from 'react';
 import React from "react";
-
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Button from '@/app/components/Button';
 import ImageViewer from '@/app/components/ImageViewer';
 import IconButton from '@/app/components/IconButton';
@@ -13,8 +13,6 @@ import CircleButton from '@/app/components/CircleButton';
 import EmojiPicker from '@/app/components/EmojiPicker';
 import EmojiList from '@/app/components/EmojiList';
 import EmojiSticker from '@/app/components/EmojiSticker';
-
-
 
 const PlaceholderImage = require('@/assets/images/background-image.png');
 
@@ -47,12 +45,17 @@ export default function Index() {
     setIsModalVisible(true);
   };
 
-  const onSaveImageAsync = async () => {
+  const onModalClose = () => {
     setIsModalVisible(false);
+  };
+
+  const onSaveImageAsync = async () => {
+    // depois
   };
   
   return (
-    <View style={styles.container}>
+    <GestureHandlerRootView style={ styles.container}>
+    <Text style={styles.title}>Bem vindos ao Sítio Urbano</Text>
       <View style={styles.imageContainer}>
           <ImageViewer imgSource={PlaceholderImage} selectedImage={selectedImage} />
           {pickedEmoji && <EmojiSticker imageSize={40} stickerSource={pickedEmoji} />}
@@ -62,7 +65,7 @@ export default function Index() {
           <View style={styles.optionsRow}>
             <IconButton icon="refresh" label="Reset" onPress={onReset} />
             <CircleButton onPress={onAddSticker} />
-            <IconButton icon="save=alt" label="Save" onPress={onSaveImageAsync} />
+            <IconButton icon="save-alt" label="Save" onPress={onSaveImageAsync} />
           </View>
         </View>
       ) : (
@@ -74,8 +77,8 @@ export default function Index() {
       <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
         <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
       </EmojiPicker>
-      <Text style={styles.title}>Bem vindos ao Sítio Urbano</Text>
-    </View>
+      
+    </GestureHandlerRootView>
    );
 }
 
