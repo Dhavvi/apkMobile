@@ -19,7 +19,8 @@ export default function EmojiList({ onSelect, onCloseModal }: Props) {
         require("@/assets/images/fazendeira.png"),
         require("@/assets/images/cowboy.png"),
         require("@/assets/images/morango.png"),
-        require("@/assets/images/cuzy.png"), 
+        require("@/assets/images/cuzy.png"),
+        require("@/assets/images/verdura.png"), 
     ]);
 
     return (

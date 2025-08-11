@@ -7,11 +7,11 @@ export default function ToDoList(){
 
     return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>Lista de Tarefas</Text>
+            <Text style={styles.titulo}>Lista de Compras</Text>
             <View style={styles.inputContainer}>
                 <TextInput
                     style={styles.input}
-                    placeholder="Digite uma tarefa..."
+                    placeholder="Digite um item da feira..."
                     value={novaTarefa}
                     onChangeText={setNovaTarefa}
                 />

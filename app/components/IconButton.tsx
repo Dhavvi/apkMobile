@@ -3,7 +3,7 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import React from 'react';
 
 type Props = {
-    icons: keyof typeof MaterialIcons.glyphMap;
+    icon: keyof typeof MaterialIcons.glyphMap;
     label: string;
     onPress: () => void;
 };
