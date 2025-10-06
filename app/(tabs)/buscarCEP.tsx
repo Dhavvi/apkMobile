@@ -1,12 +1,21 @@
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 import { useBuscaCep } from '@/app/hooks/useBuscaCep';
 import React from "react";
+import { Linking } from "react-native";
 
 export default function BuscaCEP() {
   const { cep, setCep, endereco, buscarCEP } = useBuscaCep();
+  const openMaps = () => {
+    const latitude = -22.310982;   
+    const longitude = -49.040474;
+    const url = `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
+    Linking.openURL(url);
+  };
 
   return (
     <View style={styles.container}>
+
+      
       <Text>Consulte seu CEP</Text>
 
       <TextInput
@@ -33,6 +42,7 @@ export default function BuscaCEP() {
           <Text>Estado: {endereco.uf}</Text>
         </View>
       )}
+      <Text style={styles.button} onPress={openMaps}>Clique aqui para ver nossa localização no Google Maps</Text>
     </View>
   );
 }

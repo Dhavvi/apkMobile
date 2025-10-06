@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "aula1",
+    "name": "UrbanSitio",
     "slug": "aula1",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/frutiger_icon.webp",
+    "icon": "./assets/images/frutiger_icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,9 +13,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/frutiger_icon.webp",
+        "foregroundImage": "./assets/images/frutiger_icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.dhavvi.aula1"
     },
     "web": {
       "bundler": "metro",
@@ -27,7 +28,7 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/frutigericon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
